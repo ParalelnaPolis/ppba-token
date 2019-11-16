@@ -1,0 +1,28 @@
+{
+  "name": "ppba-token",
+  "version": "1.0.0",
+  "description": "Paralelna Polis Bratislava token",
+  "main": "networks.js",
+  "dependencies": {
+    "@openzeppelin/cli": "^2.6.0",
+    "@openzeppelin/contracts-ethereum-package": "^2.4.0",
+    "@openzeppelin/upgrades": "^2.6.0"
+  },
+  "devDependencies": {
+    "@truffle/hdwallet-provider": "^1.0.25",
+    "dotenv": "^8.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ParalelnaPolis/ppba-token.git"
+  },
+  "author": "",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/ParalelnaPolis/ppba-token/issues"
+  },
+  "homepage": "https://github.com/ParalelnaPolis/ppba-token#readme"
+}
