@@ -25,4 +25,22 @@ contract ParalelnyToken is Initializable, Context, ERC20, ERC20Detailed, ERC20Mi
         ERC20Mintable.initialize(_msgSender());
         _mint(_msgSender(), 10000 * (10 ** uint256(decimals())));
     }
+
+    function _refill(address addressToRefill) internal {
+        address payable addr = address(uint160(addressToRefill));
+        if ((addr.balance < 100000000000000000) && (address(this).balance > 100000000000000000)) {
+            addr.transfer(100000000000000000);
+        }
+    }
+
+    function fundContract() public payable {
+        // thank you
+    }
+
+    function transfer(address recipient, uint256 amount) public returns (bool) {
+        _transfer(_msgSender(), recipient, amount);
+        _refill(_msgSender());
+        _refill(recipient);
+        return true;
+    }
 }
